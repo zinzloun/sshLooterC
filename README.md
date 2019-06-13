@@ -33,7 +33,7 @@ the leaked data and change the wget URL in looter.c
 
 # Usage
 <pre>
-See the original project, please note that you have to modify the /etc/pam.d/common-auth file 
+See the original project, please note that you have to modify the <b>/etc/pam.d/common-auth</b> file 
 inserting looter.so, according to the compilation instructions
 </pre>
 
