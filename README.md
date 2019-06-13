@@ -1,7 +1,8 @@
 # sshLooterC forked
 <pre>
-https://github.com/mthbernardes/sshLooterC<br/>
-
+<a href="https://github.com/mthbernardes/sshLooterC">
+https://github.com/mthbernardes/sshLooterC</a>
+</pre>
 # Changes from the original project
 * Removed libcurl4-openssl-dev dependency, now using system("wget ...")
 * Compiled for 32bit arch, should work for 64bit as well, 
