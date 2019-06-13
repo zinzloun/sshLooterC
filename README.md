@@ -17,7 +17,8 @@ See the original project
 <pre>
 Install a client (mobile or desktop), request a new bot @botfather, 
 then ask @userinfobot to get your user id to be used in conjunction with the bot API key.
-Alternatively you can expose your logic on a webserver to read the query string with the leaked data and change the wget URL in looter.c
+Alternatively you can expose your logic on a webserver to read the query string with 
+the leaked data and change the wget URL in looter.c
 </pre>
 
 # Usage
