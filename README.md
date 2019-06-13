@@ -5,8 +5,17 @@ https://github.com/mthbernardes/sshLooterC<br/>
 # Changes from the original project
 * Removed libcurl4-openssl-dev dependency, now using system("wget ...")
 * Compiled for 32bit arch, should work for 64bit as well, 
-you need to install gcc-multilib on the attacker machine
+you need to install gcc-multilib on the attacker machine.
+I have coded a C file (callLooter) to test the library before installation.
 </pre>
+
+# Compilation
+<pre>
+ gcc callLooter.c -o callLooter -m32 -ldl
+ gcc -m32 -Werror -Wall -fPIC -shared -o looter.so looter.c
+The m32 switch is optional and allows to compile the files for a 32bit arch
+</pre>
+
 
 # Install and configuration
 <pre>
