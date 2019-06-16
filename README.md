@@ -13,7 +13,7 @@ I have coded a C file, <b>callLooter.c</b> to test the library before installati
 <pre>
  gcc callLooter.c -o callLooter -m32 -ldl
  gcc -m32 -Werror -Wall -fPIC -shared -o looter.so looter.c
-The m32 switch is optional and allows to compile the files for a 32bit arch
+The m32 switch is optional and allows to compile the files for a 32bit victim on a 64bit attacker machine
 </pre>
 
 
