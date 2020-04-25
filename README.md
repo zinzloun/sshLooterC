@@ -5,7 +5,7 @@
 # Changes from the original project
 * Removed libcurl4-openssl-dev dependency, now using <b>system("wget ...")</b>
 * Compiled for 32bit arch on a 64bit system, you need to install <b>gcc-multilib</b> on the attacker machine
-* I have coded a C file, <b>callLooter.c</b> to test the library before installation on the target
+* I coded <b>callLooter.c</b> to test the library before installation on the target
 
 
 # Dependencies
