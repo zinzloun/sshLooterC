@@ -9,8 +9,8 @@
 
 
 # Dependencies
-* [Optional] to compile the program for 32bit arch you need to install <b>gcc-multilib</b>on a 64bit system
 * PAM dev library: <b>libpam0g-dev</b>
+* [Optional] To compile the program for 32bit arch you need to install <b>gcc-multilib</b> on a 64bit system
 
 # Compilation
 `gcc callLooter.c -o callLooter -m32 -ldl`
