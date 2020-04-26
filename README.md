@@ -28,6 +28,5 @@ account optional looter.so
 # Credits
 <a href="https://mthbernardes.github.io/persistence/2018/02/10/stealing-ssh-credentials-another-approach.html" target="_blank">Stealing SSH credentials Another Approach.</a>
 <br/>
-Thank you
 
  
